@@ -16,7 +16,8 @@ export function fixtureWrapper() {
 }
 
 /**
- * Cleans up all defined fixtures
+ * Cleans up all defined fixtures by removing the actual wrapper nodes.
+ * Common usecase is at the end of each test.
  */
 export function fixtureCleanup() {
   if (cachedWrappers) {

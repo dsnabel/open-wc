@@ -9,17 +9,20 @@ const isDefinedPromise = action => typeof action === 'object' && Promise.resolve
  *
  * If none of these is available we await the next frame.
  *
- * @param {HTMLElement} el
- * @returns {Promise<Element>}
+ * @template {Element} T
+ * @param {T} el
+ * @returns {Promise<T>}
  */
 export async function elementUpdated(el) {
   let hasSpecificAwait = false;
+  // @ts-ignore
   let update = el && el.updateComplete;
   if (isDefinedPromise(update)) {
     await update;
     hasSpecificAwait = true;
   }
 
+  // @ts-ignore
   update = el && el.componentOnReady ? el.componentOnReady() : false;
   if (isDefinedPromise(update)) {
     await update;
