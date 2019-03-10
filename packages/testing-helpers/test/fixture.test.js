@@ -18,7 +18,11 @@ describe('fixtureSync & fixture', () => {
     const myFunction = () => {};
 
     /**
-     * @param {Element} element
+     * @typedef {Object} TestDiv
+     * @property {number} propNumber Test property for number
+     * @property {function} propFunction Test property for function
+     *
+     * @param {TestDiv} element
      */
     function testElement(element) {
       expect(element.propNumber).to.equal(10);
