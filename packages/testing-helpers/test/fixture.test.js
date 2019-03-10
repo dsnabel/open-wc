@@ -1,4 +1,3 @@
-import 'mocha';
 import { expect } from '@bundled-es-modules/chai';
 import { cachedWrappers } from '../fixtureWrapper.js';
 import { defineCE } from '../helpers';

@@ -11,7 +11,7 @@ describe('elementUpdated', () => {
     });
 
     class TmpElement extends HTMLElement {}
-    const el = new TmpElement();
+    const el = Object.create(TmpElement.prototype);
     await elementUpdated(el);
     expect(counter).to.equal(1);
   });
@@ -25,7 +25,7 @@ describe('elementUpdated', () => {
         });
       }
     }
-    const el = new TmpElement();
+    const el = Object.create(TmpElement.prototype);
 
     await elementUpdated(el);
     expect(counter).to.equal(1);
@@ -41,7 +41,7 @@ describe('elementUpdated', () => {
         });
       }
     }
-    const el = new TmpElement();
+    const el = Object.create(TmpElement.prototype);
 
     await elementUpdated(el);
     expect(counter).to.equal(1);

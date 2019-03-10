@@ -54,7 +54,7 @@ export function aTimeout(ms) {
  * @returns {Promise<void>} Promise that resolved after requestAnimationFrame
  */
 export function nextFrame() {
-  return new Promise(resolve => requestAnimationFrame(() => resolve));
+  return new Promise(resolve => requestAnimationFrame(() => resolve()));
 }
 
 /**

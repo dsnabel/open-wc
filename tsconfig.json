@@ -10,8 +10,8 @@
     "strict": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "types": ["node"],
-    "esModuleInterop": true
+    "types": ["node", "mocha"],
+    "esModuleInterop": true,
   },
   "include": [
     "packages/testing-helpers",
