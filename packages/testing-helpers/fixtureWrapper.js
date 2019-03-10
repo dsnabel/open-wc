@@ -3,10 +3,9 @@ export const cachedWrappers = [];
 
 /**
  * Creates a wrapper as a direct child of `<body>` to put the tested element into.
- * Needed to run a `connectedCallback()` on a tested element.
+ * Need to be in the DOM to test for example `connectedCallback()` on elements.
  *
  * @returns {Element}
- * @private
  */
 export function fixtureWrapper() {
   const wrapper = document.createElement('div');
